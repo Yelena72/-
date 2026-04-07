@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS函数</title>
+    <!--
+        function 名称（参数...）{
+            函数体
+
+            return 返回值；
+        }
+
+        参数、return 可有可无
+    -->
+</head>
+<body>
+    <script>
+        /*没有参数、返回值*/
+        function getname(){
+            console.log('好');
+        }
+        getname();
+
+        /*没有参数,有返回值*/
+        function getname_re(){
+            return '好';
+        }
+        let a=getname_re();
+        console.log(a);
+         
+        /*有参数,没有返回值*/
+        let name='好';
+        function getname_c(name){
+            console.log(name);
+        }
+        getname_c(name);
+
+        /*有参数,有返回值*/
+        function getname_re_c(name){
+            return name;
+        }
+        console.log(getname_re_c(name)); 
+    </script>
+</body>
+</html>

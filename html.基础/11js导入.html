@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS导入</title>
+    <!--
+        JS导入：
+            内部：script标签内
+            内联：在标签内部
+            外部引入：引入js文件路径
+    -->
+    <!--
+        控制台打印：在控制台打印日志内容 console.log('');
+        弹窗打印：内联在script标签中 alert("");
+        向body中输出内容：document.write('');
+    -->
+    <script>
+        console.log('Hello ');
+    </script>
+
+    <script src="../JS/1js外联.js"></script>
+</head>
+<body>
+    <script>
+        console.log('Hello ');
+        alert("Hello World!");
+        document.write('我是文本');
+        document.write('<h1>我是标题</h1>');
+    </script>
+    <button onclick="alert('OK')">点我</button>
+
+    <!--输入语法：promote('提示信息')-->
+    <script>
+        prompt('请输入您的姓名：');
+    </script>
+</body>
+</html>

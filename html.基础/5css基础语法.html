@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css颜色字号设置</title>
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="./333.css">
+
+    <!--
+        外联样式新创的css文件与本文件 在同一文件夹中时，输入./选择文件
+        不在同一文件夹中，输入../选择文件
+    -->
+    <style>
+        p {
+            color: rgb(0, 255, 60);
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--css基础语法
+    选择器{
+        属性1:属性值1;
+        属性2:属性值2;
+    }
+        选择器：HTML的标签
+    -->
+
+    <!--css三种导入方式
+    内联样式>内部样式>外部样式
+    优先级高的覆盖优先级低的样式
+
+    内部样式：写在头部<style></style>之间,
+    内联样式：作为标签的属性
+    外部样式：创建一个css文件，按css语法规定样式
+    （在head中用link导入）
+    -->
+
+    <p>这是一个应用了css内部样式的文本</p>
+    <h1 style="color: aqua; font-size: 36px;">这是一个应用了css内联样式的标题</h1>
+    <p style="color: rgb(236, 15, 15); font-size: 20px;">内联样式覆盖内部样式</p>
+    <h2>与.css不同文件夹使用外部样式的二级标题</h2>
+    <h3>与.css相同文件夹使用外部样式的三级标题</h3>
+</body>
+</html>

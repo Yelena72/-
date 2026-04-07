@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css选择器</title>
+
+    <!--元素选择器-->
+    <style>
+        h2 {
+            color: aqua;
+            /*文本首行缩进 距离为20px*/
+            text-indent: 20px;
+            line-height: 100px;
+        }
+        p {
+            color: deeppink;
+            /*缩进当前元素两个文字大小的距离*/
+            text-indent: 2em;
+        }
+    </style>
+
+    <!--属性选择器--> 
+    <style>
+        <!--[属性]匹配所有有title属性的p元素-->
+        p[title]{
+            color: rgb(255, 0, 242);
+        }
+        <!--[属性="值"]匹配title属性值为p1的p元素-->
+        p[title="p1"]{
+            color: rgb(0, 255, 255);
+        }
+        <!--[属性~="值"]匹配title属性值包含p2的p元素-->
+        p[title~="p2"]{
+            color: rgb(255, 166, 0);
+        }
+        <!--[属性|="值"]匹配title属性值以p3开头的p元素-->
+        p[title|="p3"]{
+            color: rgb(0, 255, 170);
+        }
+        <!--[属性^="值"]匹配title属性值以p4开头的p元素-->
+        p[title^="p4"]{
+            color: rgb(128, 0, 128);
+        }
+        <!--[属性$="值"]匹配title属性值以p5结尾的p元素-->
+        p[title$="p5"]{
+            color: rgb(255, 255, 0);
+        }
+        <!--[属性*="值"]匹配title属性值包含p6的p元素-->
+        p[title*="p6"]{
+            color: rgb(255, 0, 0);
+        }
+    </style>
+
+    <!--类选择器-->
+    <style>
+        .highlight{
+            background-color: bisque;
+            color: hotpink;
+        }
+        
+    </style>
+
+    <!--id选择器-->
+    <style>
+        #iddd{
+            font-size: 27px;
+            color: blue;
+        }
+    </style>
+
+    <!--通用选择器-->
+    <style>
+        *{
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif; 
+            color: crimson;
+        }
+    </style>
+    
+    <!--子代选择器-->
+    <style>
+        .father>.son{
+            color: rgb(255, 0, 0);
+            font-size: 25px;
+        }
+    </style>
+
+    <!--后代选择器-->
+    <style>
+        .father p{
+            color: darkviolet;
+        }
+        .father h2{
+            color: chartreuse;
+        }
+
+        .father h4{
+            color: rgb(255, 106, 0);
+        }
+    </style>
+
+    <!--相邻（兄弟）选择器-->
+    <style>
+        h3+p{
+            background-color: darkgrey;
+        }
+    </style>
+
+    <!--伪类选择器-->
+    <style>
+        #element:hover{
+            background-color: aquamarine;
+        }
+        .element:hover{
+            background-color: cornsilk;
+        }
+        input:focus{
+            background-color: pink;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>不同类型的CSS选择器</h1>
+    <hr><hr>
+    <div>
+        <!-- 
+        【优先级】：体现在出现矛盾时，优先遵从哪个。
+        ！！！id>子代>后代>类>元素>通用！！！
+
+        元素选择器：包括p[段落]、h1~h6[标题]等文本标签
+        类选择器：用class属性分类的文本标签
+        ID选择器：用id属性分类的文本标签
+        通用选择器：用*{}设置
+        子代选择器【子代属于后代】：.father>.son
+        后代选择器【后代包含子代，后代不属于子代】：.father p(文本标签)
+        相邻（兄弟）元素选择器：位于选中元素下方紧跟的元素
+        伪类选择器：选择元素的特定状态或位置（以冒号开头),用户交互（例如鼠标悬停）
+        -->
+    </div>
+    
+    <!--元素选择器-->
+    <h2>这是一个元素选择器（可验证元素>通用）</h2>
+    <hr><hr>
+
+    <p>这是一个普通段落（可验证元素>通用）</p>
+    <p title="p1">这是一个属性选择器（可验证属性>元素）</p>
+    <p title="p2">这是另一个属性选择器（可验证属性>通用）</p>
+
+    <!--类选择器-->
+    <h2 class="highlight">这是一个类选择器（可验证类>元素）</h2>
+    <h3>这不是一个类选择器，普通三级标题</h3>
+    <h3 class="highlight">这是另一个类选择器（可验证类>通用）</h3>
+    <h2 class="highlight" id="iddd">这是一个类&id选择器（可验证id>类）</h2>
+
+    <!--id选择器-->
+    <h4 id="iddd">这是一个id选择器（可验证id>通用）</h4>
+    <p id="iddd">这是另一个id选择器（可验证id>通用 && id>元素）</p>
+    <hr><hr>
+
+    <!--子代&&后代选择器-->
+    <div class="father">
+        <p class="son" class="highlight">这是一个子代选择器(可验证子代>元素 && 子代>后代 && 子代>类)</p>
+        <p class="son" class="highlight" id="iddd">这是另一个子代选择器（可验证id>子代 && 子代>类）</p>
+        <div class="grandson1">
+            <h2>这是一个后代选择器(可验证后代>元素)</h2>
+            <h4 class="highlight">这是另一个后代选择器(可验证后代>类)</h4>
+            <p id="iddd">这是另另一个后代选择器(可验证id>后代)</p>
+        </div>
+    </div>
+    <hr><hr>
+
+    <!--相邻（兄弟）选择器-->
+    <h3>这是一个相邻选择器示例</h3>
+    <p>这是一个相邻选择器</p>
+    <p>这是普通p标签，不是另一个相邻选择器</p>
+    <hr><hr>
+
+    <!--伪类选择器-->
+    <h3 id="element">这是一个伪类选择器示例，鼠标悬停出现底色</h3>
+    <h3 class="element">这是另一个伪类选择器示例，鼠标悬停出现底色</h3>
+
+    <!--focus伪类选择器-->
+    <input type="text">
+    <input type="text">
+    <input type="text">
+
+    <!--总结-->
+    <!--
+        后代选择器：.nav a
+        子代选择器：.nav>p
+        并集选择器：.nav h3,p
+        链接伪类选择器：a：
+        :focus选择器：input:fucus
+    -->
+</body>
+</html>

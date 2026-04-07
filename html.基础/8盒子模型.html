@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css盒子模型</title>
+    <!--
+    盒子模型相关属性（复合属性）：
+        内容（Content）：实际内容，文本/图片...
+        内边距（Padding）：围绕在内容的内部（内容与边框间的空间）
+        边框（Border）：围绕在内边距的外部（盒子的边界）
+        外边距（Margin）：围绕在边框的外部，盒子与其他元素之间的空间
+    -->
+    <!--
+    border- 【复合属性 1~4个参数[缺省时与对边相同]：顺时针：上右下左】
+        ·宽度（border-width
+        ·样式(border-style)：实线（solid）、虚线（dashed）、点（dotted）、双实线（double）
+        ·颜色(border-color)
+
+    分别设置：【必须包含style】
+        ·border-top
+        ·border-right
+        ·border-bottom
+        ·border-left
+    -->
+    <style>
+        .demo{
+            display: inline;
+            font-size: 25px;
+            font-family: KaiTi;
+
+            background-color: pink;
+            width: 6cm;
+            height: 1cm;
+            padding: 50px;
+
+            border-radius: 10cm;
+
+            margin: 80px;
+            margin-left: 470px;
+            margin-right: 30px;
+        }
+
+        .border-demo{
+            font-size: 30px;
+            font-weight: bolder;
+            font-style: italic;
+
+            background-color: rgb(204, 247, 196);
+            width: 250px;
+            height: 60px;
+            padding: 50px;
+
+            border-color: rgb(158, 189, 247) black rgb(253, 176, 116);
+            border-style: dashed double dotted solid;
+            border-width: 0.15cm 0.15cm 5px;
+            border-left: 6px solid rgb(230, 206, 254);
+
+            margin: 150px;
+            margin-left: 450px;
+        }
+    </style>
+    <!--
+    box-sizing：
+        ·content-box：默认值，元素的宽度和高度只包括内容区域，不包括内边距、边框和外边距。
+        ·border-box：元素的宽度和高度包括内容区域、内边距和边框，但不包括外边距。
+    -->
+</head>
+<body>
+    <!-- <img src="盒子模型.jpg" alt=""> -->
+    <div class="demo">欢迎来到ZY的网页</div>
+    <img src="flower.jpg" alt="nothing" width="100px">
+    <div class="border-demo">hello!交个朋友</div>
+
+</body>
+</html>

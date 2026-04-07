@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单html</title>
+</head>
+<body>
+    <!--form:表单的容器,定义了数据提交到哪里（action属性）以及使用哪种 HTTP 方法-->
+    <!--
+        input标签指定不同类型的输入和控制输入的方式：
+            type属性：指定输入字段的类型
+            placeholder属性：显示在文本框中的文字，用户输入后消失（给用户提示）
+            value属性：显示在文本框中的文字（规定了input的内容）
+            name属性:相当于归类
+            id：唯一的标识
+            checked属性（属性值：checked）：首次加载时被选中，单选/多选设置，页面打开时默认选中
+            maxlength属性（属性值：正整数）：规定输入字段中的字符的最大长度
+            required属性（属性值：required）：必填项，不能为空
+            pattern属性（属性值：正则表达式）：规定输入字段的值必须匹配的模式（例如：邮箱、手机号、密码等）
+            autocomplete属性（属性值：on/off）：是否开启自动完成功能（默认开启）
+
+        label标签和input搭配使用,for属性对应input的id
+        
+        select标签：用户选择下拉列表，至少包含两个<option>，在<option>中定义selected="selected"为默认选中项
+
+        textarea标签：定义多行文本输入（常用于留言板、评论）
+            rows属性：定义可见行数,默认值为2
+            cols属性：定义可见列数,默认值为20
+        
+        button标签：定义按钮（点击后提交表单数据）
+            type属性（属性值：submit/reset/button）：指定按钮的类型（默认值为submit）
+            value属性：定义按钮上显示的文本（默认值为按钮的类型）
+            disabled属性（属性值：disabled）：禁用按钮，不能点击 
+    -->
+    <!--
+        type属性的值：
+            text:文本
+            radio:单选
+            checkbox:多选
+            password:输入的内容变成点点点
+            submit:提交填写的内容
+            file:上传文件[multiple:允许选择多个文件][accept:指定文件类型,多个类型中间用逗号隔开]
+    -->
+
+    <!--
+        label标签：用于绑定一个表单元素，当点击label标签内的文本时，浏览器自动将焦点转到对应的表单元素上    
+    -->
+    <form>
+        <input type="text" maxlength="3">
+        <label>name:</label>
+        <input type="text" placeholder="请输入">
+        <span>age:</span>
+        <input type="text" value="请输入">
+        <label for="pwd">密码：</label>
+        <input type="password" id="pwd" placeholder="请输入密码">
+        <br><br>
+
+        <label >性别:</label>
+        <input type="radio" name="gender">male
+        <input type="radio" name="gender" checked="checked">female
+        <br><br>
+
+        <label>性别:</label>
+        <input type="radio" name="sex" id="man"> <label for="man">男</label>
+        <input type="radio" name="sex" id="woman"> <label for="woman">女</label>
+        <br><br>
+
+        <label>爱好:</label>
+        <input type="checkbox" name="hobby" id="s"> <label for="s">sing</label>
+        <input type="checkbox" name="hobby" id="d"> <label for="d">dance</label>
+        <input type="checkbox" name="hobby" id="p"> <label for="p">play</label>
+    </form>
+    <br>
+
+    <!--select-->
+    <form>
+        <span>籍贯：</span>
+        <select>
+            <option>吉林</option>
+            <option>辽宁</option>
+            <option>黑龙江</option>
+            <option>广东</option>
+            <option selected="selected">厦门</option>
+        </select>
+    </form>
+
+    <!--textarea 实际开发中用css来改变大小-->
+    <form>
+        <textarea>好好好好好好好好好好好好好好好好好好好好好好好好好好好好好</textarea>
+    </form>
+    <!--#表示不跳转-->
+    <form action="#">
+        <input type="submit">
+        <input type="submit" value="上传">
+    </form>
+
+    <!--file-->
+    <form action="#">
+        <input type="file" multiple="multiple" accept=".jpg,.png,.gif">
+    </form>
+
+</body>
+</html>

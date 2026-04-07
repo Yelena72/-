@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js基础语法</title>
+    <!--
+    弱数据类型（let 变量名= ）
+    基本数据类型：number数值型、string字符串、boolean布尔型、undefined未定义、null空引用
+
+        声明变量：let,var(避免使用)
+        声明常量：const
+        【当操作错误时，返回NaN,但NaN!=NaN】
+
+        检测数据类型：typeof(x)或typeof x
+        数据类型转换：隐式转换、显示转换
+            隐式：
+                +两边只要有一个是字符串则另外一个隐式转换为字符串。但只有一个变量(+'数字')则会转化为数字类型
+                -*/等 会把数据转成数字类型
+            显示：
+                Number()、parseInt()、parseFloat()
+        控制语句：
+            条件相关：if else
+            循环相关：for, while, continue, break
+    -->
+</head>
+<body>
+    <script>
+        var m;
+        let x=5;
+        const PI=3.14;
+        let name='string';
+        let empty=null;
+        console.log(m,x,PI,name,empty);
+
+        let r=prompt('请输入半径');
+        document.writeln(PI*r*r);
+        document.writeln('name的数据类型为：'+typeof name+typeof(name));
+
+        //字符串类型减数据常量，发生错误返回NaN
+        document.writeln(name-PI);
+        //字符串拼接+，只要其中一个为字符串类型，则可以拼接在一起
+        document.writeln(name + PI);
+        //特殊拼接
+        document.writeln('我今年'+ x +'岁了');
+        //更简易：模板字符串。语法：反引号``包含数据,${}包裹变量
+        document.writeln(`我今年${x}岁了`);
+
+        //类型转换
+        let str='123';
+        document.writeln(Number(str));
+        let num=prompt('输入年薪：');
+        document.writeln(Number(num));
+        num = Number(prompt('输入年薪：'));
+        document.writeln(num);
+        num=+prompt('输入年薪：'); 
+        document.writeln(num);
+
+        document.writeln(parseInt('12px'));
+        document.writeln(parseInt('13.14px'));
+        document.writeln(parseFloat('12px'));
+        document.writeln(parseFloat('13.14px'));
+
+        /*数组操作：
+            增加：
+                push()将一个或多个元素添加到数组末尾，并返回数组新长度
+                unshift()将一个或多个元素添加到数组开头，并返回数组新长度
+            删除：
+                pop()删除最后一个，返回删除的元素
+                shift()删除第一个，返回删除的元素
+                splice(起始位置，删除个数)删除指定元素
+        */
+    </script>
+</body>
+</html>

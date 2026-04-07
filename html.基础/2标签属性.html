@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML2标签属性</title>
+</head>
+
+<body>
+    <!--标签属性:开始标签  属性名="属性值"-->
+    <!--属性名不区分大小写，属性值区分大小写-->
+
+    <!-- 
+        align:规定表格相对周围元素的对齐方式（left/center/right）
+        border:表格边框
+        cellpadding:单元边沿与内容之间的空白
+        cellspacing:单元格之间的空白（通常为0）
+        width:表格宽
+        height:表格高 
+    -->
+    <table align="center" border="10" cellpadding="20" cellspacing="0">
+        <thead>
+            <tr>
+                <th>heading 1</th>
+                <th>heading 2</th>
+                <th>heading 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>element 1</td>
+                <td>element 2</td>
+                <td>elememt 3</td>
+            </tr>
+            <tr>
+                <td>element 4</td>
+                <td>element 5</td>
+                <td>elememt 6</td>
+            </tr>
+            <tr>
+                <td>element 8</td>
+                <td>element 9</td>
+                <td>elememt 0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--
+        合并单元格：
+            1.确定跨行/跨列合并
+                跨行：rowspan
+                跨列：colspan
+            2.找到目标单元格：合并方式=合并单元格的数量
+            3.删除多余单元格
+    -->
+    
+    <table border="1" cellspacing="0" height="300" width="600">
+        <tr>
+            <td></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <!--a标签:创建链接-->
+    <table border="20">
+        <tr>
+            <th>a标签:创建链接</th>
+        </tr>
+        <tr>
+            <td>href属性:定义链接到的目标</td>
+        </tr>
+        <tr>
+            <td>href="#"表示不跳转</td>
+        </tr>
+        <tr>
+            <th>target:定义打开方式</th>
+        </tr>
+        <tr>
+            <td>target="_self":链接在当前页打开</td>
+        </tr>
+        <tr>
+            <td>target="_blank":链接在新窗口打开</td>
+        </tr>
+        <tr>
+            <td>target="_parent":在父窗口打开</td>
+        </tr>
+        <tr>
+            <td>target="_top":在顶层窗口打开</td>
+        </tr>
+    </table>
+
+    <!--
+        br:换行
+        hr:水平分割线
+    -->
+    <a href="https://docs.geeksman.com">这是一个超链接</a>
+    <br>
+    <a href="http://docs.geeksman.com" target="_blank">这是第二个超链接</a>
+    <br>
+    <a href="http://docs.geeksman.com" target="_self">这是第三个超链接</a>
+    <br>
+    <a href="http://docs.geeksman.com" target="_parent">这是第四个超链接</a>
+    <br>
+    <a href="http://docs.geeksman.com" target="_top">这是第五个超链接</a>
+    <hr>
+
+    <!--img:图片-->
+    <table>
+        <tr>
+            <th>img标签属性</th>
+        </tr>
+        <tr>
+            <td>src="":图片路径</td>
+        </tr>
+        <tr>
+            <td>alt="":如果找不到路径 则显示的内容</td>
+        </tr>
+        <tr>
+            <td>可将图片拖至同一路径下</td>
+        </tr>
+        <tr>
+            <td>可复制图片的来源(链接)</td>
+        </tr>
+        <tr>
+            <td>width:设置图片宽度</td>
+        </tr>
+        <tr>
+            <td>height:设置图片高度</td>
+        </tr>
+
+    </table>
+
+    <img src="flower.jpg" alt="未找到图片">
+    <img src="FLOWER.JPG" alt="未找到图片">
+    <img src="lover.jpg" alt="未找到图片">
+    <img src="https://ts1.tc.mm.bing.net/th/id/R-C.f7530826ebfe6b42c6d42253bac6153d?rik=JYIKz8yEvjuRmg&riu=http%3a%2f%2fwww.quazero.com%2fuploads%2fallimg%2f140303%2f1-140303215013.jpg&ehk=feA%2f5sUIHbzCYEj7Mq8o2hZrIFNOsnnwOBX0gVUVpOI%3d&risl=&pid=ImgRaw&r=0"
+        alt="000">
+    <img src="https://ts1.tc.mm.bing.net/th/id/R-C.f7530826ebfe6b42c6d42253bac6153d?rik=JYIKz8yEvjuRmg&riu=http%3a%2f%2fwww.quazero.com%2fuploads%2fallimg%2f140303%2f1-140303215013.jpg&ehk=feA%2f5sUIHbzCYEj7Mq8o2hZrIFNOsnnwOBX0gVUVpOI%3d&risl=&pid=ImgRaw&r=0"
+        alt="000" width="100" height="100">
+    <!--video:视频-->
+    <!--
+        controls:视频控制器
+        autoplay:自动播放
+        muted:静音播放
+        loop:循环播放
+        poster:视频封面
+    -->
+    <video src="video.mp4" controls autoplay muted loop poster="flower.jpg"></video>
+    
+    <!--
+        视频标签兼容性写法
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.webm" type="video/webm">
+            <source src="video.ogg" type="video/ogg">
+            <p>您的浏览器不支持 video 标签,请升级浏览器或使用其他浏览器</p>
+        </video>
+    -->
+
+    <audio src="audio.mp3" controls></audio>
+    <!--
+        音频标签兼容性写法
+        <audio controls>
+            <source src="audio.mp3" type="audio/mp3">
+            <source src="audio.ogg" type="audio/ogg">
+            <p>您的浏览器不支持 audio 标签,请升级浏览器或使用其他浏览器</p>
+        </audio>
+    -->
+</body>
+
+</html>

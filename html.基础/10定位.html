@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <!--        定位=定位模式+边偏移
+    
+    定位模式：决定元素的定位方式
+        相对定位:相对于元素在文档流中的正常位置定位,不脱离文档流（原位置保留）
+            position:relative;
+        绝对定位：相对于其最近的已定位祖先元素进行定位，不占据文档流
+            position:relative;
+        固定定位：相对于浏览器窗口进行定位。不占据文档流，固定在屏幕上位置，不随滚动而移动
+            position:fixed;
+        粘性定位：相对于浏览器窗口进行定位。占据文档流，必须添加top/bottom/left/right其中一个才有效
+            position:sticky;
+        静态定位: 默认 无定位 无边偏移
+            position:staticl;
+
+    边偏移：定位的盒子移动到最终位置
+        top:顶端偏移量，定义元素相对于其父元素上边线的距离
+        bottom:底端偏移量，定义元素相对于其父元素下边线的距离
+        left:左端偏移量，定义元素相对于其父元素左边线的距离
+        right:右端偏移量，定义元素相对于其父元素右边线的距离
+    -->
+    <style>
+        .box1{
+            height:350px;
+            background-color: aqua;
+        }
+        .box_normal{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .box_relative{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: relative;
+            /*改变位置*/
+            left: 120px;
+            top: 40px;
+        }
+
+        .box2{
+            height:350px;
+            background-color: yellowgreen;
+        }
+        .box_absolute{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            left: 120px;
+        }
+
+        .box_fixed{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: fixed;
+            right: 0;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1> 相对定位 </h1>
+    <div class="box1">
+        <div class="box_normal"></div>
+        <div class="box_relative"></div>
+        <div class="box_normal"></div>
+    </div>
+
+    <h1> 绝对定位 </h1>
+    <div class="box2">
+        <div class="box_normal"></div>
+        <div class="box_absolute"></div>
+        <div class="box_normal"></div>
+    </div>
+fixed
+    <h1> 固定定位 </h1>
+    <div class="box_fixed"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css属性</title>
+    <style>
+        h1{
+            background-color: beige;
+            font-style: normal;
+        }
+        div{
+            width: 500px;
+            height: 500px;
+            background-color: rgb(243, 215, 220);
+            background-image: url(./flower.jpg);
+            background-repeat: no-repeat;
+            background-position: 50px 0;
+            background-attachment: fixed;
+            /* background: rgba(0, 0, 0, 0.1); */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!--以下5个属性可合并在background中复合（没有顺序要求）-->
+        背景颜色background-color和背景图片background-image可叠加使用
+        平铺background-repeat: 
+            1在纵向和横向平铺：repeat（默认）
+            2不平铺：no-repeat
+            3在横向平铺：repeat-x
+            4在纵向平铺：repeat-y
+        位置background-position:
+            1参数是方位名词：与顺序无关，如果只写一个则第二个默认为居中
+                top|bottom|center|left|right
+            2参数是精确单位：x,y。如果只有一个数据，一定是x，另一个默认垂直居中
+            3参数是混合单位：精确单位和方位名词混合使用，第一个为x，第二个为y
+        固定background-attachment:
+            1背景图片随对象内容滚动：scroll(默认)
+            2背景图片固定：fixed
+        颜色半透明background：rgba(数字,数字,数字,透明度0~1)
+    </div>
+    <a href="https://www.runoob.com/cssref/css-reference.html#font">访问菜鸟教程css属性</a>
+    <h1 style="background-color: rgb(180, 249, 174); height: 10cm; width: 500px;">字体、大小、样式、粗细、颜色、底色、行间距、宽度/高度</h1>
+    <br>
+
+    <!--font复合属性设置顺序[size&&family必有，其他可被填入默认值]：font-style font-variant font-weight font-size/line-height font-family-->
+    <p style="font: bolder italic 25px 'kaiti';">这是一个font复合属性示例</p>
+    <p style="line-height: 2cm;">line-height长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距长文本设置行与行的间距</p>
+
+    <!--插入图片-->
+    <img src="flower.jpg" alt="nothing">
+    <img src="flower.jpg" alt="nothing"style="height: 5cm;">
+    <img style="height: 10cm; width: 10cm;" src="https://ts1.tc.mm.bing.net/th/id/R-C.f7530826ebfe6b42c6d42253bac6153d?rik=JYIKz8yEvjuRmg&riu=http://www.quazero.com/uploads/allimg/140303/1-140303215013.jpg&ehk=feA/5sUIHbzCYEj7Mq8o2hZrIFNOsnnwOBX0gVUVpOI=&risl=&pid=ImgRaw&r=0" alt="nothing">
+</body>
+</html>

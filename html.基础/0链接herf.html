@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>链接访问html</title>
+    <!--
+        链接伪类选择器：
+            a:link 选择所有未被访问的链接
+            a:visited 选择所有已被访问的链接
+            a:hover 选择鼠标指针位于其上的链接
+            a:active 选择活动链接（鼠标按下未弹起的链接）
+    -->
+    <style>
+        a:link{
+            color: black;
+            text-decoration: none;
+        }
+        a:visited{
+            color: yellowgreen;
+        }
+        a:hover{
+            color: aqua;
+        }
+        a:active{
+            color: chocolate;
+        }
+        a{
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 外部链接 -->
+    <a href="https://github.com/">访问 GitHub </a>
+
+    <br>
+    <!-- 内部链接：内部页面名称-->
+    <a href="8盒子模型.html">访问内部链接</a>
+
+    <br>
+    <!--空链接 -->
+    <a href="#">空链接</a>
+
+    <br>
+    <!--下载链接：地址链接的是文件.exe或 压缩包.zip -->
+    <a href="flower.zip">下载文件</a>
+
+    <br>
+    <!--网页元素链接：文本、图像、表格、音频、视频 -->
+    <a href="http://www.baidu.com"><img src="flower.jpg"></a>
+
+    <!-- 邮件链接 -->
+    <a href="mailto:123456@qq.com">发送邮件</a>
+
+    <br>
+    <!--锚点链接：快速定位到页面某个位置，#名字，id=名字-->
+    <h2>目录</h2>
+    <a href="#name">姓名</a>
+    <a href="#experience">演艺经历</a>
+    <a href="#family">家庭</a>
+
+    <h3 id="name">姓名</h3>
+    <p>刘亦菲</p>
+    <h3 id="experience">演艺经历</h3>
+    <p>刘亦菲，1987年8月25日出生于湖北省武汉市，华语影视女演员、歌手，毕业于北京电影学院表演系。2002年，因出演民国剧《金粉世家》中白秀珠一角踏入演艺圈。2003年，凭借武侠剧《天龙八部》中王语嫣一角提名第1届电视剧风云盛典古装剧最佳女演员。2004年，凭借仙侠剧《仙剑奇侠传》赵灵儿一角获得高人气与关注度。2005年，因在武侠剧《神雕侠侣》饰演小龙女一角受到广泛关注。</p>
+    <h3 id="family">家庭</h3>
+    <p>刘亦菲的父亲安少康是武汉大学的法文教授、孔子学院院长 [68]；母亲刘晓莉是武汉歌舞团的独舞演员；刘亦菲的爷爷孔钧是武汉医学院党委副书记 [176]；奶奶安蕴淑是华中科技大学同济医学院书记</p>
+</body>
+
+</html>

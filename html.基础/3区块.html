@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML3 区块</title>
+</head>
+<body>
+    <!--
+        块元素：占据整行（div），可以包含其他块级元素&行内元素
+        行内元素：占据所需宽度（span），不能包含块级元素，但可包含其他行内元素
+        行内块元素：水平方向排列，可设置宽度、高度、内外边距等块级元素属性（img），可以包含其他块级元素&行内元素
+    -->
+    <h1>div</h1>
+    <table style="background-color: aquamarine;">
+        <tr><th>div:无特殊含义，用于创建容器快</th></tr>
+        <tr><td>class="nav"或class="nav-bar" :导航栏</td></tr>
+        <tr><td>class="content":内容</td></tr>
+        <tr><td>输入.nav或div.nav按Tab,标签属性：class</td></tr>
+        <tr><td>输入#nav或div#nav按Tab,标签属性：id</td></tr>
+    </table>
+    
+    <div class="nav" style="background-color: aqua;">
+        <a href="#">链接1</a>
+        <a href="#">链接2</a>
+        <a href="#">链接3</a>
+    </div>
+
+    <div id="nav">
+        <a href="#">链接4</a>
+        <a href="#">链接5</a>
+        <a href="#">链接6</a>
+    </div>
+
+    <div class="content">
+        <h3>Heading</h3>
+        <p>Para1</p>
+        <p>Para2</p>
+        <p>Para3</p>
+    </div>
+
+    <h1>span</h1>
+    <table style="background-color: aquamarine;">
+        <tr><td>相当于没有特殊元素的a和img标签，只占据所需宽度</td></tr>
+        <tr><td>作用：内联样式化文本，包装小部分文本，使用样式或标记，结合CSS、JS处理</td></tr>
+    </table>
+    <br>
+    <span style="background-color: aqua;">这是第1个span标签</span>
+    <span style="background-color: chartreuse;">这是第2个span标签</span>
+    <span style="background-color: antiquewhite;">这是第3个span标签</span>
+    <span style="background-color: darkgrey;">这是第4个span标签</span>
+    <hr>
+    <span>链接点击这里<a href="#">链接</a></span>
+    <span>(span嵌套a)</span>
+    <hr>
+
+    <!--
+        相互转换：display
+        111块级元素转行内元素
+        222行内元素转行内块元素
+        333none不显示
+        ...
+    -->
+
+    <div style="display: inline; background-color: aqua;">这是块级元素转行内元素</div>
+    <span style="display: inline-block; background-color: bisque; width: 10cm; height: 2cm;">这是一个行内元素转行内块元素</span>
+    <span style="display: none; background-color: blueviolet;">这是尝试</span>
+</body>
+</html>
